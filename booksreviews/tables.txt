@@ -1,0 +1,51 @@
+﻿create table  subjects 
+( subcode  varchar(10)  primary key,
+  subname  varchar(30)  not null
+)
+
+insert into subjects values ('cs', 'C# Language');
+insert into subjects values('asp.net', 'Asp.Net 4.0');
+insert into subjects values ('linq', 'LINQ');
+
+create table  books 
+( bookid  int primary key,
+  title   varchar(50)  not null,
+  authors  varchar(100),
+  publisher varchar(20),
+  price   money,
+  nopages int ,
+  pubdate datetime,
+  subcode  varchar(10)  references subjects(subcode),
+  addedon  datetime
+)
+
+insert into books values(1,'C# complete reference','Herbert Schildt','SAMS',450,980,'11/09/2009','cs',getdate());
+insert into books values(2,'Asp.Net 4.0 Unleashed','Stephen Walther','SAMS',550,1980,'4/05/2010','asp.net',getdate());
+insert into books values(3,'Linq In Action','Fabrice Marguerie, Steve Eichert, Jim Wooley, and Matt Warren','Manning',475,600,'2/04/2008','linq',getdate());
+insert into books values(4,'Pro Linq :Language Integrated Query in C# 2010','Joseph C. Rattz','Apress',450,600,'11/07/2007','linq',getdate());
+insert into books values(5,'Pro ASP.NET MVC 2 Framework','Steven Sanderson','Apress',525,776,'06/30/2010','asp.net',getdate());
+
+create table  users
+( userid int  identity primary key,
+  email  varchar(50) unique,
+  password varchar(10) not null
+)
+
+insert into users values('a@a.com','a');
+insert into users values('aspnet@srikanth.com','a');
+
+create table reviews
+(reviewid int  identity,
+ bookid   int  references  books(bookid),
+ userid   int  references  users(userid),
+ review   varchar(1000),
+ rating   int,
+ reviewdate datetime
+ );
+
+
+ create procedure RegisterUser(@email varchar(50), @password varchar(10))
+ as
+    insert into users values(@email,@password);
+
+

@@ -1,0 +1,106 @@
+﻿body
+{
+    font-family: Verdana;
+    font-size: 10pt;
+    background-color:rgba(255, 0, 62, 0.24) ;
+   /*background-image: url('../../images/eli-francis-100644.jpg');*/
+
+}
+h2
+{
+    font-family: Arial;
+    font-size: 16pt;
+    font-weight: bold;
+    color: gray;
+}
+
+h3 
+{
+    font-family: Arial;
+    font-size: 14pt;
+    font-weight: bold;
+    color: skyblue;
+}
+
+.main 
+{
+    width:775px;
+    height: 600px;
+    padding:0px;
+    margin:0px;
+    border:2px solid black;
+    overflow:  scroll;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:rgba(255, 0, 62, 0.24) ;
+        /*background-image: url('../../images/eli-francis-100644.jpg');*/
+    
+    
+}
+.header
+{
+    font-family: Arial;
+    font-size: 30pt;
+    font-weight: bold;
+    color: silver;
+    background-color: black;
+    letter-spacing: 5pt;
+    text-align: center;
+}
+
+.footer
+{
+    font-weight:bold;
+    background-color: #000000;
+    color: #C0C0C0;
+    text-align: center;
+    width:775px;
+    border:2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu
+{
+   background-color: silver;
+}
+
+#links  a
+ { 
+        color: white;
+        display: block;
+        font: verdana 700 11pt;
+        padding: 5px;
+        text-decoration: none;
+        width:100px;
+        background-color: gray;
+        text-align:center;
+        float: left;
+        border:2px solid;
+}
+
+
+
+#links a:hover {
+        background: black;
+        text-decoration :underline;
+}
+
+#user 
+{
+    float : right;
+}
+
+#user  a
+ { 
+        font: verdana 700 11pt;
+        padding: 0px;
+        text-align:center;
+ }
+
+.content
+{
+     clear:both;
+     text-align:left;
+     padding:0px  5px 0px 5px;
+}

@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>BooksReviews.Com</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="main">
+        <div class="header">BooksReviews.Com</div>
+        <div class="menu">
+        <span id="links"> 
+           <asp:HyperLink ID="HyperLink1" NavigateUrl="~/default.aspx" runat="server">Home</asp:HyperLink>
+           <asp:HyperLink ID="HyperLink2" NavigateUrl="~/search.aspx" runat="server">Search</asp:HyperLink>
+           <asp:HyperLink ID="HyperLink3" NavigateUrl="~/topbooks.aspx" runat="server">Most Popular</asp:HyperLink>
+        </span>
+         <span id="user">
+               <asp:Label ID="lblUser" runat="server" Text="" style="font-weight:bold"></asp:Label>&nbsp;&nbsp;
+               [<asp:HyperLink ID="hl1" runat="server"></asp:HyperLink>]&nbsp;&nbsp;
+               [<asp:HyperLink ID="hl2" runat="server"></asp:HyperLink>]&nbsp;&nbsp;
+           </span>
+        </div>
+        <div class="content">
+           <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+           </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <div class="footer">@Booksreview.com.All rights reserved.</div>   
+    </form>
+</body>
+</html>
